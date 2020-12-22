@@ -9,7 +9,7 @@ EXPOSE ${PORT}
 COPY target/${JAR_FILE} $HOME/app.jar
 COPY docker/health-check.sh $HOME/health-check.sh
 
-ENV HEALTH_CHECK_URL https://localhost:${PORT}/api/v1/health
+ENV HEALTH_CHECK_URL http://localhost:${PORT}/api/v1/health
 ENV JAVA_OPTS ${JAVA_OPTS}
 
 LABEL Dockerfile="https://github.com/paulstroie/light-microservice-base/docker/Dockerfile"
